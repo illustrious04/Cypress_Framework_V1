@@ -1,0 +1,25 @@
+{
+  "name": "cypress_framework_v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:tests:CHROME": "cypress run --spec cypress/e2e/Evluate/*.cy.js --headed --browser chrome",
+    "cy:tests:FIREFOX": "cypress run --spec cypress/e2e/Evluate/*.cy.js --headed --browser firefox",
+    "cy:tests:CHROME-HEADLESS": "cypress run --spec cypress/e2e/Evluate/*.cy.js",
+    "cy:tests:CHROME:SANITY": "cypress run --spec cypress/e2e/Evluate/*.cy.js --headed --browser chrome --env grep=@sanity",
+    "cy:tests:CHROME:REGRESSION": "cypress run --spec cypress/e2e/Evluate/*.cy.js --headed --browser chrome --env grep=@regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.15.2"
+  },
+  "devDependencies": {
+    "@cypress/grep": "^4.1.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
