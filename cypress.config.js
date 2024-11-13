@@ -3,8 +3,14 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   env: { application_URL: "https://company.evluate.com/en/company-login" },
 
+// Setting up the default view port dimentions
+viewportHeight:760,
+viewportWidth: 1100,
+  // Setting up the number of retries for the failsed test case.
+  retries: 1,
   //Configure the Mochawsome report for geneating the test reports
   reporter: "cypress-mochawesome-reporter",
+  
   reporterOptions: {
     reportDir: "cypress/reports/Evluate-ui-test-reports",
     charts: true,

@@ -34,7 +34,7 @@ describe("Evluate- [Login Page]", () => {
     login_page.click_sign_in_button();
     company_dashboard.elements
       .heading_assesments()
-      .should("have.text", "Assessments");
+      .should("have.text", "Assessments hyhyhyhyh");
     cy.screenshot();
     // Checking footer copyright message
     footer.elements.copy_right().should("include.text", "Evluate Global, LLC.");
